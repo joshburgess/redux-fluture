@@ -1,6 +1,4 @@
-import { isFuture } from 'fluture'
-
-console.log('isFuture', isFuture)
+import { isFuture } from 'fluture/src/core'
 
 const getRejectHandler = dispatch => next => action =>
   error => error.type
