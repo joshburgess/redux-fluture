@@ -1,0 +1,115 @@
+{
+  "name": "redux-fluture",
+  "version": "0.0.1",
+  "description": "Fluture-js based middleware for Redux. Handle async actions with FantasyLand compliant Futures, a lazy, monadic alternative to Promises.",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "typings": "./index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "test": "cross-env BABEL_ENV=test ava --tap | tap-diff",
+    "tdd": "cross-env BABEL_ENV=test ava --watch",
+    "safety-check": "yarn lint && yarn test",
+    "build:cjs": "rimraf lib && cross-env BABEL_ENV=cjs babel src --out-dir lib",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:umd:dev": "cross-env BABEL_ENV=umd webpack src/index.js dist/redux-fluture.js --config webpack.config.dev.babel.js",
+    "build:umd:prod": "cross-env BABEL_ENV=umd webpack src/index.js dist/redux-fluture.min.js --config webpack.config.prod.babel.js",
+    "build:umd": "rimraf dist && yarn build:umd:dev && yarn build:umd:prod",
+    "build": "yarn build:cjs && yarn build:es && yarn build:umd",
+    "prepublish": "yarn lint && yarn build"
+  },
+  "repository": "joshburgess/redux-fluture",
+  "keywords": [
+    "action",
+    "async",
+    "asynchronous",
+    "deferred",
+    "deferreds",
+    "fantasyland",
+    "fantasy-land",
+    "fantasy land",
+    "fork",
+    "functional",
+    "fluture",
+    "future",
+    "futures",
+    "lazy",
+    "lazy evaluation",
+    "middleware",
+    "monad",
+    "monadic",
+    "promise",
+    "promises",
+    "redux",
+    "task",
+    "tasks",
+    "thunk"
+  ],
+  "author": {
+    "name": "Josh Burgess",
+    "email": "joshburgess.webdev@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshburgess/redux-fluture/issues"
+  },
+  "homepage": "https://github.com/joshburgess/redux-fluture#README.md",
+  "ava": {
+    "files": [
+      "tests/*.test.js"
+    ],
+    "failFast": true,
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "dependencies": {
+    "fluture": "^6.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-babili": "^0.1.2",
+    "babel-preset-env": "^1.5.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.22.0",
+    "babel-register": "^6.24.1",
+    "babili-webpack-plugin": "^0.1.1",
+    "cross-env": "^5.0.0",
+    "eslint": "^3.17.1",
+    "eslint-config-standard-pure-fp": "^2.0.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-better": "0.1.5",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "nyc": "^10.1.2",
+    "rimraf": "^2.5.4",
+    "sinon": "^2.2.0",
+    "tap-diff": "^0.1.1",
+    "typescript": "^2.0.3",
+    "typings": "^2.1.0",
+    "webpack": "^2.5.1"
+  },
+  "npmName": "redux-fluture",
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ]
+}
