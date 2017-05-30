@@ -11,21 +11,15 @@ const config = {
     ],
   },
   output: {
-    library: 'ReduxMost',
+    library: 'ReduxFluture',
     libraryTarget: 'umd',
   },
   externals: {
-    most: {
-      root: 'Most',
-      commonjs2: 'most',
-      commonjs: 'most',
-      amd: 'most',
-    },
-    redux: {
-      root: 'Redux',
-      commonjs2: 'redux',
-      commonjs: 'redux',
-      amd: 'redux',
+    fluture: {
+      root: 'Fluture',
+      commonjs2: 'fluture',
+      commonjs: 'fluture',
+      amd: 'fluture',
     },
   },
   resolve: {
