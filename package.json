@@ -1,6 +1,6 @@
 {
   "name": "redux-fluture",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fluture-js based middleware for Redux. Handle async actions with FantasyLand compliant Futures, a lazy, monadic alternative to Promises.",
   "main": "lib/index.js",
   "module": "es/index.js",
