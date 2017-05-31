@@ -2315,14 +2315,14 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-fluture@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/fluture/-/fluture-6.1.0.tgz#6e2620347ade51bb7ec130c04a72aa1ec77327f1"
+fluture@6.*:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/fluture/-/fluture-6.1.1.tgz#7b4b249e9a02eb7f819d2376a82cb60ec27ba6ef"
   dependencies:
     concurrify "^1.0.0"
     denque "^1.1.1"
     inspect-f "^1.2.0"
-    sanctuary-type-classes "^5.1.0"
+    sanctuary-type-classes "^6.0.0"
     sanctuary-type-identifiers "^2.0.0"
 
 fn-name@^2.0.0:
@@ -4373,6 +4373,12 @@ samsam@1.x, samsam@^1.1.3:
 sanctuary-type-classes@^5.1.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/sanctuary-type-classes/-/sanctuary-type-classes-5.2.0.tgz#8534606f5556bef83ec9ab5c2ffef8e2842acd0f"
+  dependencies:
+    sanctuary-type-identifiers "1.0.x"
+
+sanctuary-type-classes@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/sanctuary-type-classes/-/sanctuary-type-classes-6.0.0.tgz#1db3f8c1247de018471e978fe4956a03eb62f464"
   dependencies:
     sanctuary-type-identifiers "1.0.x"
 
